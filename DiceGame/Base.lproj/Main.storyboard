@@ -17,12 +17,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-z4-5By">
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-z4-5By">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="C2X-rv-JUi">
+                                <rect key="frame" x="37.5" y="12" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GRb-gS-jac"/>
+                                    <constraint firstAttribute="height" constant="200" id="ZIj-AZ-Obf"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-tM-UlP">
+                                <rect key="frame" x="51" y="227" width="273" height="338"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J5C-46-dlv">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="129"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tú" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbb-UQ-ZXe">
+                                                <rect key="frame" x="127.5" y="0.0" width="18" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="XTm-jI-nKq">
+                                                <rect key="frame" x="0.0" y="22" width="273" height="107"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="sci-66-MVa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="107"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-DV-btg">
+                                                        <rect key="frame" x="168" y="0.0" width="105" height="107"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wd8-Wp-HCf">
+                                        <rect key="frame" x="0.0" y="149" width="273" height="129"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evl-VT-XkL">
+                                                <rect key="frame" x="127.5" y="0.0" width="18" height="22"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="Lh5-pd-obh">
+                                                <rect key="frame" x="0.0" y="22" width="273" height="107"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="Hv9-DX-mfC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="107"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="ADK-tA-8uw">
+                                                        <rect key="frame" x="168" y="0.0" width="105" height="107"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDC-WM-VPy">
+                                        <rect key="frame" x="106.5" y="298" width="60" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="09x-RX-vco"/>
+                                            <constraint firstAttribute="height" constant="40" id="5zx-23-vaP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <color key="tintColor" red="0.64712749810000003" green="0.6535347011" blue="0.6535347011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Tirar">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C2X-rv-JUi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="12" id="6QL-xZ-ePr"/>
+                            <constraint firstItem="tfM-tM-UlP" firstAttribute="top" secondItem="C2X-rv-JUi" secondAttribute="bottom" constant="15" id="NDW-cN-IDq"/>
+                            <constraint firstItem="C2X-rv-JUi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aIV-mD-qkZ"/>
+                            <constraint firstItem="1u2-z4-5By" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i1z-n8-g4K"/>
+                            <constraint firstItem="1u2-z4-5By" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qHb-z0-wD7"/>
+                            <constraint firstItem="1u2-z4-5By" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rU4-vW-0Ml"/>
+                            <constraint firstItem="1u2-z4-5By" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sFY-Jp-sE9"/>
+                            <constraint firstItem="tfM-tM-UlP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzF-RJ-aKH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -32,6 +109,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="717.5999755859375" height="476.8800048828125"/>
+        <image name="background" width="193" height="128.63999938964844"/>
+        <image name="dice1" width="105.5" height="107"/>
+        <image name="logo" width="335" height="224.5"/>
     </resources>
 </document>
