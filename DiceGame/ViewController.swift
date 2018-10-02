@@ -19,13 +19,20 @@ class ViewController: UIViewController {
     
     
     let diceImages = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
-    let diceImagesNumber = ["dice1":1, "dice2":2, "dice3":3, "dice4":4, "dice5":5, "dice6":6]
+    let diceImagesNumber = [1,2,3,4,5,6]
     let nFaces : UInt32
     
     var diceLeftPlayerIndex = 0
     var diceRightPlayerIndex = 0
     var diceLeftIAIndex = 0
     var diceRightIAIndex = 0
+    
+    var diceLeftPlayerNumber = 0
+    var diceRightPlayerNumber = 0
+    var diceLeftIANumber = 0
+    var diceRightIANumber = 0
+    var resultSumPlayer = 0
+    var resultSumIA = 0
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -70,6 +77,12 @@ class ViewController: UIViewController {
             
             self.diceLeftPlayer.image = UIImage(named: self.diceImages[self.diceLeftPlayerIndex])
             self.diceRightPlayer.image = UIImage(named: self.diceImages[self.diceRightPlayerIndex])
+            
+            
+            self.diceLeftPlayerNumber = Int(self.diceImagesNumber[self.diceLeftPlayerIndex])
+            self.diceRightPlayerNumber = Int(self.diceImagesNumber[self.diceRightPlayerIndex])
+            self.resultSumPlayer = self.diceLeftPlayerNumber + self.diceRightPlayerNumber
+            print("result: \(self.resultSumPlayer)")
         }
         
     }
