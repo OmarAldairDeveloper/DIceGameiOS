@@ -97,6 +97,29 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6b0-QI-9PW">
+                                <rect key="frame" x="75" y="612.5" width="225.5" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuenta:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7fL-sC-R2J" userLabel="Count">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tú: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3Ne-ev-QVY" userLabel="Count">
+                                        <rect key="frame" x="96" y="0.0" width="44" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rival: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Gj9-95-pkU" userLabel="Count">
+                                        <rect key="frame" x="160" y="0.0" width="65.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -104,7 +127,9 @@
                             <constraint firstItem="nM3-Pi-Hyx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="CLv-Tc-bdN"/>
                             <constraint firstItem="nM3-Pi-Hyx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EhT-22-xSS"/>
                             <constraint firstItem="tfM-tM-UlP" firstAttribute="top" secondItem="nM3-Pi-Hyx" secondAttribute="bottom" constant="10" id="GFR-C8-g6h"/>
+                            <constraint firstItem="6b0-QI-9PW" firstAttribute="top" secondItem="tfM-tM-UlP" secondAttribute="bottom" constant="15" id="XFv-bv-0cL"/>
                             <constraint firstItem="C2X-rv-JUi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aIV-mD-qkZ"/>
+                            <constraint firstItem="6b0-QI-9PW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fgO-wY-h8H"/>
                             <constraint firstItem="1u2-z4-5By" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i1z-n8-g4K"/>
                             <constraint firstItem="tfM-tM-UlP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lYN-7D-2nz"/>
                             <constraint firstItem="1u2-z4-5By" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qHb-z0-wD7"/>
@@ -116,6 +141,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="countIALabel" destination="Gj9-95-pkU" id="6H7-9C-XuN"/>
+                        <outlet property="countPlayerLabel" destination="3Ne-ev-QVY" id="CVl-PQ-Tvu"/>
+                        <outlet property="countRoundsLabel" destination="7fL-sC-R2J" id="A3F-BR-0uy"/>
                         <outlet property="diceLeftIA" destination="Hv9-DX-mfC" id="QZs-VZ-4dx"/>
                         <outlet property="diceLeftPlayer" destination="sci-66-MVa" id="th2-T3-8yx"/>
                         <outlet property="diceRightIA" destination="ADK-tA-8uw" id="2jg-Zf-vkZ"/>

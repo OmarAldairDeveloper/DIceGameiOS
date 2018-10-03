@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceLeftIA: UIImageView!
     @IBOutlet weak var diceRightIA: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var countPlayerLabel: UILabel!
+    @IBOutlet weak var countIALabel: UILabel!
+    
+    @IBOutlet weak var countRoundsLabel: UILabel!
     
     let diceImages = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
     let diceImagesNumber = [1,2,3,4,5,6]
@@ -33,6 +37,10 @@ class ViewController: UIViewController {
     var diceRightIANumber = 0
     var resultSumPlayer = 0
     var resultSumIA = 0
+    
+    var countPlayer = 0
+    var countIA = 0
+    var numberOfRounds = 0
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -124,13 +132,25 @@ class ViewController: UIViewController {
     func checkWiner(){
         
         if self.resultSumPlayer > self.resultSumIA{
+            self.countPlayer += 1
             self.resultLabel.text = "Has ganado. Tu resultado: \(self.resultSumPlayer), tu rival: \(self.resultSumIA)"
+            self.countPlayerLabel.text = "Tú: \(self.countPlayer)"
             
         }else if self.resultSumPlayer == self.resultSumIA{
             self.resultLabel.text = "Has empatado. Tu resultado: \(self.resultSumPlayer), tu rival: \(self.resultSumIA)"
         }else {
+            self.countIA += 1
             self.resultLabel.text = "Has perdido. Tu resultado: \(self.resultSumPlayer), tu rival: \(self.resultSumIA)"
+            self.countIALabel.text = "Rival: \(self.countIA)"
         }
+        
+        self.numberOfRounds += 1
+        self.countRoundsLabel.text = "Cuenta: \(self.numberOfRounds)"
+        
+        if self.numberOfRounds >= 10{
+            print("Finalizado")
+        }
+        
     }
     
     
