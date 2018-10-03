@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var countPlayerLabel: UILabel!
     @IBOutlet weak var countIALabel: UILabel!
-    
     @IBOutlet weak var countRoundsLabel: UILabel!
     
     let diceImages = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
@@ -148,9 +147,35 @@ class ViewController: UIViewController {
         self.countRoundsLabel.text = "Cuenta: \(self.numberOfRounds)"
         
         if self.numberOfRounds >= 10{
-            print("Finalizado")
+            restartGame()
         }
         
+    }
+    
+    
+    func restartGame(){
+        
+        let alert = UIAlertController(title: "Fin", message: "Has llegado a 10 rondas", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.countPlayer = 0
+            self.countIA = 0
+            self.numberOfRounds = 0
+            self.updateLabels()
+            self.generateRandomDices()
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+        
+        
+        
+    }
+    
+    func updateLabels(){
+        self.countPlayerLabel.text = "Tú: \(self.countPlayer)"
+        self.countIALabel.text = "Rival: \(self.countIA)"
+        self.countRoundsLabel.text = "Cuenta: \(self.numberOfRounds)"
     }
     
     
