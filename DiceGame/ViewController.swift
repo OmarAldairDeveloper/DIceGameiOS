@@ -132,6 +132,17 @@ class ViewController: UIViewController {
             self.resultLabel.text = "Has perdido. Tu resultado: \(self.resultSumPlayer), tu rival: \(self.resultSumIA)"
         }
     }
+    
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake{
+            generateRandomDices()
+        }
+    }
 
     
     @IBAction func playButton(_ sender: UIButton) {
