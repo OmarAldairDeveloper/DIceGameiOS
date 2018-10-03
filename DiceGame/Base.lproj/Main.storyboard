@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-tM-UlP">
-                                <rect key="frame" x="49" y="227" width="277" height="338"/>
+                                <rect key="frame" x="49" y="259.5" width="277" height="338"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J5C-46-dlv">
                                         <rect key="frame" x="2" y="0.0" width="273" height="129"/>
@@ -75,9 +75,9 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDC-WM-VPy">
-                                        <rect key="frame" x="108.5" y="298" width="60" height="40"/>
+                                        <rect key="frame" x="78.5" y="298" width="120" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="09x-RX-vco"/>
+                                            <constraint firstAttribute="width" constant="120" id="09x-RX-vco"/>
                                             <constraint firstAttribute="height" constant="40" id="5zx-23-vaP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
@@ -91,17 +91,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nM3-Pi-Hyx">
+                                <rect key="frame" x="10" y="222" width="355" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="C2X-rv-JUi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="12" id="6QL-xZ-ePr"/>
-                            <constraint firstItem="tfM-tM-UlP" firstAttribute="top" secondItem="C2X-rv-JUi" secondAttribute="bottom" constant="15" id="NDW-cN-IDq"/>
+                            <constraint firstItem="nM3-Pi-Hyx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="CLv-Tc-bdN"/>
+                            <constraint firstItem="nM3-Pi-Hyx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EhT-22-xSS"/>
+                            <constraint firstItem="tfM-tM-UlP" firstAttribute="top" secondItem="nM3-Pi-Hyx" secondAttribute="bottom" constant="10" id="GFR-C8-g6h"/>
                             <constraint firstItem="C2X-rv-JUi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aIV-mD-qkZ"/>
                             <constraint firstItem="1u2-z4-5By" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i1z-n8-g4K"/>
+                            <constraint firstItem="tfM-tM-UlP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lYN-7D-2nz"/>
                             <constraint firstItem="1u2-z4-5By" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qHb-z0-wD7"/>
                             <constraint firstItem="1u2-z4-5By" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rU4-vW-0Ml"/>
                             <constraint firstItem="1u2-z4-5By" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sFY-Jp-sE9"/>
-                            <constraint firstItem="tfM-tM-UlP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zzF-RJ-aKH"/>
+                            <constraint firstItem="nM3-Pi-Hyx" firstAttribute="top" secondItem="C2X-rv-JUi" secondAttribute="bottom" constant="10" id="zMY-cZ-YQG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nM3-Pi-Hyx" secondAttribute="trailing" constant="10" id="zNm-Ew-3jw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -110,6 +120,7 @@
                         <outlet property="diceLeftPlayer" destination="sci-66-MVa" id="th2-T3-8yx"/>
                         <outlet property="diceRightIA" destination="ADK-tA-8uw" id="2jg-Zf-vkZ"/>
                         <outlet property="diceRightPlayer" destination="AlH-DV-btg" id="d80-8u-7RK"/>
+                        <outlet property="resultLabel" destination="nM3-Pi-Hyx" id="5AY-r2-u2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceRightPlayer: UIImageView!
     @IBOutlet weak var diceLeftIA: UIImageView!
     @IBOutlet weak var diceRightIA: UIImageView!
-    
+    @IBOutlet weak var resultLabel: UILabel!
     
     let diceImages = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
     let diceImagesNumber = [1,2,3,4,5,6]
@@ -124,15 +124,12 @@ class ViewController: UIViewController {
     func checkWiner(){
         
         if self.resultSumPlayer > self.resultSumIA{
-            print("Has ganado. Tu resultado fué: \(self.resultSumPlayer) y el del rival fué: \(self.resultSumIA)")
-        }
-        
-        if self.resultSumPlayer == self.resultSumIA{
-            print("Has empatado. Tu resultado fué \(self.resultSumPlayer) y el del rival fué \(self.resultSumIA)")
-        }
-        
-        if self.resultSumPlayer < self.resultSumIA{
-            print("Has perdido. Tu resultado fué \(self.resultSumPlayer) y el del rival fué \(self.resultSumIA)")
+            self.resultLabel.text = "Has ganado. Tu resultado: \(self.resultSumPlayer), tu rival: \(self.resultSumIA)"
+            
+        }else if self.resultSumPlayer == self.resultSumIA{
+            self.resultLabel.text = "Has empatado. Tu resultado: \(self.resultSumPlayer), tu rival: \(self.resultSumIA)"
+        }else {
+            self.resultLabel.text = "Has perdido. Tu resultado: \(self.resultSumPlayer), tu rival: \(self.resultSumIA)"
         }
     }
 
