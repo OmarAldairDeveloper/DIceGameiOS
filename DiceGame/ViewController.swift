@@ -19,17 +19,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var countIALabel: UILabel!
     @IBOutlet weak var countRoundsLabel: UILabel!
     
+    
     let diceImages = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
     let diceImagesNumber = [1,2,3,4,5,6]
     let nFaces : UInt32
     
-    
+    // Indices aleatorios de los dados
     var diceLeftPlayerIndex = 0
     var diceRightPlayerIndex = 0
     var diceLeftIAIndex = 0
     var diceRightIAIndex = 0
     
-    
+    // Número entero que guarda el valor de la cara, además de la suma total de las caras de ambos dados
     var diceLeftPlayerNumber = 0
     var diceRightPlayerNumber = 0
     var diceLeftIANumber = 0
@@ -37,6 +38,7 @@ class ViewController: UIViewController {
     var resultSumPlayer = 0
     var resultSumIA = 0
     
+    // Puntaje
     var countPlayer = 0
     var countIA = 0
     var numberOfRounds = 0
@@ -58,6 +60,7 @@ class ViewController: UIViewController {
     
     
     func generateRandomDices(){
+        
         
         self.diceLeftPlayerIndex = Int(arc4random_uniform(nFaces))
         self.diceRightPlayerIndex = Int(arc4random_uniform(nFaces))
